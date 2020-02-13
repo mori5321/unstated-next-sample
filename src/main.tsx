@@ -19,7 +19,7 @@ const Screen: React.FC = (props) => {
 
   const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const user = { ...userContainer.user, name: e.target.value }
-    userContainer.setUser(user);
+    userContainer.setUserAsync(user);
   }
 
   return (
