@@ -1,16 +1,15 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { useContainer } from 'unstated-next';
+import { GeneralContainer } from "./containers/GeneralContainer";
 import { UserContainer } from "./containers/UserContainer"
-import { PlanContainer } from "./containers/PlanContainer"
+import { PlanContainer } from "./containers/PlanContainer";
 
 const App: React.FC = (props) => {
   return (
-    <UserContainer.Provider>
-      <PlanContainer.Provider>
-        <Screen />
-      </PlanContainer.Provider>
-    </UserContainer.Provider>
+    <GeneralContainer>
+      <Screen />
+    </GeneralContainer>
   )
 }
 
